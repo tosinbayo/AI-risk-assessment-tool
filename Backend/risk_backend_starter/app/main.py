@@ -21,7 +21,21 @@ from app.schemas import (
     ScoreBreakdown,
 )
 from app.scoring import get_score_breakdown
-
+from fastapi.middleware.cors import CORSMiddleware
+app = FastAPI(
+    title="AI-Powered Vendor Risk Assessment Tool",
+    version="0.1.0"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://vercel.com/oluwatosin-adebayos-projects/tools101.vercel.app",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 load_dotenv()
 UPLOAD_DIR = os.getenv("UPLOAD_DIR", "uploads")
 Path(UPLOAD_DIR).mkdir(parents=True, exist_ok=True)
@@ -150,3 +164,4 @@ def extract_evidence(request: ExtractEvidenceRequest):
         evidence_summary=evidence_summary,
         notes=notes,
     )
+

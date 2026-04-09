@@ -21,11 +21,22 @@ from app.schemas import (
     ScoreBreakdown,
 )
 from app.scoring import get_score_breakdown
+
+load_dotenv()
+UPLOAD_DIR = os.getenv("UPLOAD_DIR", "uploads")
+Path(UPLOAD_DIR).mkdir(parents=True, exist_ok=True)
+
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(title="AI-Powered Vendor Risk Assessment Tool", version="0.2.0")
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(
     title="AI-Powered Vendor Risk Assessment Tool",
     version="0.1.0"
 )
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -36,14 +47,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-load_dotenv()
-UPLOAD_DIR = os.getenv("UPLOAD_DIR", "uploads")
-Path(UPLOAD_DIR).mkdir(parents=True, exist_ok=True)
 
-Base.metadata.create_all(bind=engine)
-
-app = FastAPI(title="AI-Powered Vendor Risk Assessment Tool", version="0.2.0")
-
+@app.get("/")
+def root():
+    return {"message": "Vendor Risk Assessment API is running"}
 
 @app.get("/")
 def root():

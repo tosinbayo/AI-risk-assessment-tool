@@ -1,0 +1,38 @@
+{
+  "vendor_name": "Acme Cloud Analytics",
+  "service_description": "Customer analytics platform processing user behavior and account data.",
+  "assessor_name": "Oluwatosin",
+  "regulatory_scope": ["GDPR", "SOC 2", "ISO 27001"],
+  "answers": {
+    "q1_data_type": 5,
+    "q2_business_criticality": 5,
+    "q3_customer_data_access": 5,
+    "q4_internet_facing": 5,
+    "q5_regulated_regions": 5,
+    "q6_mfa": 5,
+    "q7_rbac": 3,
+    "q8_privileged_monitoring": 3,
+    "q9_encryption_at_rest": 4,
+    "q10_encryption_in_transit": 1,
+    "q11_data_retention_policy": 5,
+    "q12_incident_response_plan": 5,
+    "q13_breach_notification_timeline": 5,
+    "q14_log_monitoring": 3,
+    "q15_certification": 5,
+    "q16_security_audits": 3,
+    "q17_subprocessor_disclosure": 5,
+    "q18_bcdr": 3,
+    "q19_backups_tested": 5,
+    "q20_secure_hosting": 3
+  },
+  "evidence": {
+    "encryption_at_rest": "weak",
+    "encryption_in_transit": "strong",
+    "access_control": "medium",
+    "incident_response": "missing",
+    "logging_monitoring": "medium",
+    "certification": "missing",
+    "backups": "weak",
+    "hosting_security": "medium"
+  }
+}

@@ -1,0 +1,11 @@
+Frontend/risk_frontend_starter/node_modules/
+Frontend/risk_frontend_starter/.next/
+Frontend/risk_frontend_starter/.env.local
+
+Backend/risk_backend_starter/.env
+Backend/risk_backend_starter/venv/
+Backend/risk_backend_starter/.venv/
+Backend/risk_backend_starter/__pycache__/
+
+.vscode/
+*.log

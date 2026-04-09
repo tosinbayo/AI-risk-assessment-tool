@@ -1,0 +1,17 @@
+QUESTION_FRAMEWORK_MAP = {
+    "q6_mfa": ["SOC 2 CC6", "NIST AC-7", "ISO 27001 Annex A Access Control"],
+    "q7_rbac": ["NIST AC", "ISO 27001 Annex A Access Control"],
+    "q8_privileged_monitoring": ["SOC 2 CC7", "NIST AU", "ISO 27001 Logging and Monitoring"],
+    "q9_encryption_at_rest": ["ISO 27001 Cryptography", "GDPR Article 32", "SOC 2 CC6.1"],
+    "q10_encryption_in_transit": ["GDPR Article 32", "NIST SC", "SOC 2 CC6.1"],
+    "q11_data_retention_policy": ["GDPR Storage Limitation", "ISO 27001 Information Lifecycle"],
+    "q12_incident_response_plan": ["NIST IR", "ISO 27001 Incident Management", "SOC 2 CC7"],
+    "q13_breach_notification_timeline": ["GDPR Articles 33-34", "Incident Notification Obligations"],
+    "q14_log_monitoring": ["SOC 2 CC7", "NIST AU", "ISO 27001 Logging and Monitoring"],
+    "q15_certification": ["SOC 2", "ISO 27001"],
+    "q16_security_audits": ["SOC 2", "ISO 27001 Internal Audit"],
+    "q17_subprocessor_disclosure": ["GDPR Processor Transparency", "Third-Party Risk Governance"],
+    "q18_bcdr": ["ISO 27001 Business Continuity", "NIST CP"],
+    "q19_backups_tested": ["ISO 27001 Backup", "NIST CP-9"],
+    "q20_secure_hosting": ["Cloud Security Baselines", "ISO 27001 Infrastructure Security"],
+}

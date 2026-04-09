@@ -30,7 +30,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://vercel.com/oluwatosin-adebayos-projects/tools101.vercel.app",
+        "https://tools101-five.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
